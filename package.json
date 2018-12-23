@@ -1,0 +1,28 @@
+{
+  "name": "trello-wordpress-sync",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "micro",
+    "deploy": "now -e NODE_ENV=production"
+  },
+  "now": {
+    "env": {
+      "trelloApiKey": "@trello-api-key",
+      "trelloToken": "@trello-token",
+      "wpToken": "@wp-token"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "lodash": "^4.17.10",
+    "micro": "^9.3.1",
+    "now": "^11.1.15",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  }
+}
