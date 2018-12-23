@@ -3,6 +3,15 @@ const keys = require('lodash/keys');
 const get = require('lodash/get');
 const env = get(require('./package.json'), 'now.env', {});
 
+/*
+* secrets.json schema:
+* {
+*   "trelloApiKey": "",
+*   "trelloToken": "",
+*   "wpToken": "",
+*   "idModel": ""
+* }
+**/
 const secrets = process.env.NODE_ENV !== 'production' ? require('./secrets.json') : pick(
   process.env,
   ...keys(env),
